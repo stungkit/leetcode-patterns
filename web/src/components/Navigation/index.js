@@ -18,7 +18,7 @@ const Navigation = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color="light" light expand="md" fixed="top">
+    <Navbar color="light" light expand="md" sticky="top">
       <Container>
         <NavbarBrand>Leetcode Patterns</NavbarBrand>
         <NavbarToggler onClick={toggle} />
