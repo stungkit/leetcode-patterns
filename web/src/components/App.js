@@ -3,13 +3,13 @@ import React from 'react';
 import './styles.scss';
 
 import Navigation from './Navigation';
-import DataGrid from './DataGrid';
+import Table from './Table';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <DataGrid />
+      <Table />
     </div>
   );
 }
