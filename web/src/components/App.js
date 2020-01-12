@@ -1,20 +1,13 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
 
-import './App.css';
+import './styles.scss';
+
+import Navigation from './Navigation';
 
 function App() {
   return (
     <div className="App">
-      <Container fluid>
-        <Col>
-          <Row>
-            <header>
-              <p>Coming soon to a theatre near you!</p>
-            </header>
-          </Row>
-        </Col>
-      </Container>
+      <Navigation />
     </div>
   );
 }
