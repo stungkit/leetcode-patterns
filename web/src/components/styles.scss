@@ -1,13 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
-body {
+.App {
   margin: 0;
+
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased !important;
-}
-
-.App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
