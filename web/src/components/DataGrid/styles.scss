@@ -1,0 +1,13 @@
+.datagrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > .col {
+    padding: 100px 0 100px 0;
+  }
+
+  .row {
+    justify-content: center;
+  }
+}
