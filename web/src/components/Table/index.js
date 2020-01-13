@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Badge, NavLink } from 'reactstrap';
+import ReactTooltip from 'react-tooltip';
 import TableView from './TableView';
 
 import questionList from '../../data';
@@ -53,11 +54,7 @@ const Table = () => {
             Cell: cellInfo => {
               const companies = cellInfo.row.original.companies.map(company => {
                 const icon = images(`./${company}.png`);
-                return (
-                  <span key={company} title={company}>
-                    <img src={icon} alt={company} />
-                  </span>
-                );
+                return <img src={icon} alt={company} data-tip={company} />;
               });
 
               return <Row className="companies">{companies}</Row>;
@@ -75,6 +72,7 @@ const Table = () => {
       <Col>
         <Row>
           <Col>
+            <ReactTooltip />
             <TableView columns={columns} data={data} />
           </Col>
         </Row>
