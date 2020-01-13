@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table } from 'reactstrap';
 import { useTable, useSortBy } from 'react-table';
+import { FaArrowCircleUp, FaArrowCircleDown } from 'react-icons/fa';
 
 function ReactTable({ columns, data }) {
   const {
@@ -18,7 +19,7 @@ function ReactTable({ columns, data }) {
   );
 
   return (
-    <Table align="center" {...getTableProps()}>
+    <Table align="center" striped hover {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
@@ -26,7 +27,16 @@ function ReactTable({ columns, data }) {
               <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                 {column.render('Header')}
                 <span>
-                  {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
+                  {' '}
+                  {column.isSorted ? (
+                    column.isSortedDesc ? (
+                      <FaArrowCircleDown />
+                    ) : (
+                      <FaArrowCircleUp />
+                    )
+                  ) : (
+                    ''
+                  )}
                 </span>
               </th>
             ))}
