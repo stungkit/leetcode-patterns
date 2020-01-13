@@ -981,7 +981,7 @@ export default [
   {
     name: 'Find K Closest Elements',
     url: 'https://leetcode.com/problems/find-k-closest-elements/',
-    pattern: 'ModifiedBinary Search',
+    pattern: 'Modified Binary Search',
     difficulty: 'Medium',
     companies: ['Uber'],
   },
@@ -1217,28 +1217,28 @@ export default [
   {
     name: 'Binary Tree Level Order Traversal II',
     url: 'https://leetcode.com/problems/binary-tree-level-order-traversal-ii/',
-    pattern: 'Tree Breadth First Search',
+    pattern: 'BFS',
     difficulty: 'Easy',
     companies: ['Amazon'],
   },
   {
     name: 'Average of Levels in Binary Tree',
     url: 'https://leetcode.com/problems/average-of-levels-in-binary-tree/',
-    pattern: 'Tree Breadth First Search',
+    pattern: 'BFS',
     difficulty: 'Easy',
     companies: ['Facebook'],
   },
   {
     name: 'Minimum Depth of Binary Tree',
     url: 'https://leetcode.com/problems/minimum-depth-of-binary-tree/',
-    pattern: 'Tree Breadth First Search',
+    pattern: 'BFS',
     difficulty: 'Easy',
     companies: ['Facebook'],
   },
   {
     name: 'Binary Tree Level Order Traversal',
     url: 'https://leetcode.com/problems/binary-tree-level-order-traversal/',
-    pattern: 'Tree Breadth First Search',
+    pattern: 'BFS',
     difficulty: 'Medium',
     companies: ['Amazon', 'Facebook', 'Bloomberg', 'Microsoft', 'LinkedIn'],
   },
@@ -1246,7 +1246,7 @@ export default [
     name: 'Binary Tree Zigzag Level Order Traversal',
     url:
       'https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/',
-    pattern: 'Tree Breadth First Search',
+    pattern: 'BFS',
     difficulty: 'Medium',
     companies: ['Amazon', 'Microsoft', 'Bloomberg', 'Qualtrics', 'Facebook'],
   },
@@ -1254,7 +1254,7 @@ export default [
     name: 'Populating Next Right Pointers in Each Node',
     url:
       'https://leetcode.com/problems/populating-next-right-pointers-in-each-node/',
-    pattern: 'Tree Breadth First Search',
+    pattern: 'BFS',
     difficulty: 'Medium',
     companies: ['Amazon', 'Bloomberg', 'Microsoft', 'Oracle', 'Facebook'],
   },
@@ -1262,49 +1262,49 @@ export default [
     name: 'Populating Next Right Pointers in Each Node II',
     url:
       'https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/',
-    pattern: 'Tree Breadth First Search',
+    pattern: 'BFS',
     difficulty: 'Medium',
     companies: ['Microsoft', 'Bloomberg', 'Amazon'],
   },
   {
     name: 'Binary Tree Right Side View',
     url: 'https://leetcode.com/problems/binary-tree-right-side-view/',
-    pattern: 'Tree Breadth First Search',
+    pattern: 'BFS',
     difficulty: 'Medium',
     companies: ['Facebook', 'Amazon', 'Bloomberg', 'Microsoft'],
   },
   {
     name: 'All Nodes Distance K in Binary Tree',
     url: 'https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/',
-    pattern: 'Tree Breadth First Search',
+    pattern: 'BFS',
     difficulty: 'Medium',
     companies: ['Facebook', 'Amazon', 'Uber', 'Microsoft', 'Oracle'],
   },
   {
     name: 'Boundary of Binary Tree',
     url: 'https://leetcode.com/problems/boundary-of-binary-tree',
-    pattern: 'Tree Breadth First Search',
+    pattern: 'BFS',
     difficulty: 'Medium',
     companies: ['Amazon', 'Microsoft'],
   },
   {
     name: 'Same Tree',
     url: 'https://leetcode.com/problems/same-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Easy',
     companies: ['Amazon', 'Microsoft', 'Facebook', 'Bloomberg'],
   },
   {
     name: 'Path Sum',
     url: 'https://leetcode.com/problems/path-sum/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Easy',
     companies: ['Facebook', 'Amazon'],
   },
   {
     name: 'Diameter of Binary Tree',
     url: 'https://leetcode.com/problems/diameter-of-binary-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Easy',
     companies: [
       'Facebook',
@@ -1320,14 +1320,14 @@ export default [
   {
     name: 'Merge Two Binary Trees',
     url: 'https://leetcode.com/problems/merge-two-binary-trees/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Easy',
     companies: ['Adobe'],
   },
   {
     name: 'Maximum Depth of Binary Tree',
     url: 'https://leetcode.com/problems/maximum-depth-of-binary-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Easy',
     companies: ['Amazon', 'Microsoft', 'Facebook', 'Google', 'Bloomberg'],
   },
@@ -1335,35 +1335,35 @@ export default [
     name: 'Lowest Common Ancestor of a Binary Search Tree',
     url:
       'https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Easy',
     companies: ['LinkedIn', 'Amazon', 'Microsoft'],
   },
   {
     name: 'Subtree of Another Tree',
     url: 'https://leetcode.com/problems/subtree-of-another-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Easy',
     companies: ['Amazon', 'Microsoft', 'Google'],
   },
   {
     name: 'Invert Binary Tree',
     url: 'https://leetcode.com/problems/invert-binary-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Easy',
     companies: ['Google', 'Amazon'],
   },
   {
     name: 'Path Sum II',
     url: 'https://leetcode.com/problems/path-sum-ii/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Medium',
     companies: ['Quora', 'Amazon', 'Facebook', 'Google'],
   },
   {
     name: 'Path Sum III',
     url: 'https://leetcode.com/problems/path-sum-iii/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Medium',
     companies: ['Quora', 'Amazon', 'Bloomberg'],
   },
@@ -1371,7 +1371,7 @@ export default [
     name: 'Lowest Common Ancestor of a Binary Tree',
     url:
       'https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Medium',
     companies: [
       'Amazon',
@@ -1388,14 +1388,14 @@ export default [
   {
     name: 'Maximum Binary Tree',
     url: 'https://leetcode.com/problems/maximum-binary-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Medium',
     companies: ['Amazon'],
   },
   {
     name: 'Maximum Width of Binary Tree',
     url: 'https://leetcode.com/problems/maximum-width-of-binary-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Medium',
     companies: ['Google', 'Bloomberg', 'Amazon'],
   },
@@ -1403,7 +1403,7 @@ export default [
     name: 'Construct Binary Tree from Preorder and Inorder Traversal',
     url:
       'https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Medium',
     companies: [
       'Microsoft',
@@ -1417,7 +1417,7 @@ export default [
   {
     name: 'Validate Binary Search Tree',
     url: 'https://leetcode.com/problems/validate-binary-search-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Medium',
     companies: [
       'Facebook',
@@ -1434,21 +1434,21 @@ export default [
   {
     name: 'Kth Smallest Element in a BST',
     url: 'https://leetcode.com/problems/kth-smallest-element-in-a-bst/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Medium',
     companies: ['Facebook', 'Oracle', 'Amazon', 'Microsoft'],
   },
   {
     name: 'Implement Trie (Prefix Tree)',
     url: 'https://leetcode.com/problems/implement-trie-prefix-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Medium',
     companies: ['Amazon', 'Google', 'Facebook', 'Microsoft'],
   },
   {
     name: 'Binary Tree Maximum Path Sum',
     url: 'https://leetcode.com/problems/binary-tree-maximum-path-sum/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Hard',
     companies: [
       'Facebook',
@@ -1462,7 +1462,7 @@ export default [
   {
     name: 'Serialize and Deserialize Binary Tree',
     url: 'https://leetcode.com/problems/serialize-and-deserialize-binary-tree/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Hard',
     companies: [
       'Facebook',
@@ -1479,7 +1479,7 @@ export default [
   {
     name: 'Word Search II',
     url: 'https://leetcode.com/problems/word-search-ii/',
-    pattern: 'Tree Depth First Search',
+    pattern: 'DFS',
     difficulty: 'Hard',
     companies: [
       'Amazon',
