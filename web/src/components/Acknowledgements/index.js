@@ -23,7 +23,7 @@ const Acknowledgements = () => {
     <Container className="acknowledgements">
       <Row>
         <h1>
-          The following sources were used in aggregrating this question list:
+          The following sources were used in aggregating this question list:
         </h1>
       </Row>
       <Row>
