@@ -24,7 +24,6 @@ const Navigation = () => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem>Question List</NavItem>
             <NavItem>
               <NavLink
                 target="_blank"
