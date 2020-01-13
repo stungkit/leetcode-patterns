@@ -37,7 +37,10 @@ const Table = () => {
             accessor: 'difficulty',
             disableSortBy: true,
             Cell: cellInfo => (
-              <Badge className={cellInfo.row.original.difficulty} pill>
+              <Badge
+                className={cellInfo.row.original.difficulty.toLowerCase()}
+                pill
+              >
                 {cellInfo.row.original.difficulty}
               </Badge>
             ),
