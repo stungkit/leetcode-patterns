@@ -12,6 +12,9 @@ import {
 import classnames from 'classnames';
 
 import Table from '../Table';
+import Tips from '../Tips';
+
+import './styles.scss';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState('1');
@@ -40,24 +43,28 @@ const Tabs = () => {
               toggle('2');
             }}
           >
-            Moar Tabs
+            Tips
           </NavLink>
         </NavItem>
       </Nav>
-      <TabContent activeTab={activeTab}>
-        <TabPane tabId="1">
-          <Row>
-            <Col>
-              <Table />
-            </Col>
-          </Row>
-        </TabPane>
-        <TabPane tabId="2">
-          <Row>
-            <Col>Tab pane 2</Col>
-          </Row>
-        </TabPane>
-      </TabContent>
+      <Container>
+        <TabContent activeTab={activeTab}>
+          <TabPane tabId="1">
+            <Row>
+              <Col>
+                <Table />
+              </Col>
+            </Row>
+          </TabPane>
+          <TabPane tabId="2">
+            <Row>
+              <Col>
+                <Tips />
+              </Col>
+            </Row>
+          </TabPane>
+        </TabContent>
+      </Container>
     </Container>
   );
 };
