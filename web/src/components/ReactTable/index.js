@@ -14,6 +14,9 @@ function ReactTable({ columns, data }) {
     {
       columns,
       data,
+      initialState: {
+        sortBy: [{ id: 'pattern', desc: false }],
+      },
     },
     useSortBy,
   );
