@@ -1,9 +1,29 @@
 .table {
   > .col {
-    padding: 100px 0 100px 0;
+    padding: 50px 0 0 0;
   }
 
   .row {
     justify-content: center;
+  }
+
+  thead > tr:first-child {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 0;
+  }
+
+  .Easy {
+    background-color: green;
+  }
+
+  .Medium {
+    background-color: orange;
+  }
+
+  .Hard {
+    background-color: red;
   }
 }
