@@ -22,7 +22,7 @@ function TableView({ columns, data }) {
   );
 
   return (
-    <Table align="center" striped hover {...getTableProps()}>
+    <Table align="center" responsive striped hover {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>

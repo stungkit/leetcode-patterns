@@ -3,13 +3,13 @@ import React from 'react';
 import './styles.scss';
 
 import Navigation from './Navigation';
-import Table from './Table';
+import Tabs from './Tabs';
 
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <Table />
+      <Tabs />
     </div>
   );
 }
