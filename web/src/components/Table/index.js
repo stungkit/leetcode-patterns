@@ -51,7 +51,7 @@ const Table = () => {
             Header: 'Companies',
             accessor: 'companies',
             Cell: cellInfo => {
-              return cellInfo.row.original.companies.map(company => {
+              const companies = cellInfo.row.original.companies.map(company => {
                 const icon = images(`./${company}.png`);
                 return (
                   <span key={company} title={company}>
@@ -59,6 +59,8 @@ const Table = () => {
                   </span>
                 );
               });
+
+              return <Row className="companies">{companies}</Row>;
             },
             disableSortBy: true,
           },
