@@ -9,6 +9,7 @@ import {
   NavbarToggler,
   NavItem,
 } from 'reactstrap';
+import { FaGithub } from 'react-icons/fa';
 
 import './styles.scss';
 
@@ -29,7 +30,7 @@ const Navigation = () => {
                 target="_blank"
                 href="https://github.com/SeanPrashad/leetcode-patterns"
               >
-                GitHub
+                <FaGithub />
               </NavLink>
             </NavItem>
           </Nav>
