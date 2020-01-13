@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'reactstrap';
 import { useTable, useSortBy } from 'react-table';
-import { FaArrowCircleUp, FaArrowCircleDown } from 'react-icons/fa';
+import { FaSortAlphaUp, FaSortAlphaDown } from 'react-icons/fa';
 
 function ReactTable({ columns, data }) {
   const {
@@ -33,9 +33,9 @@ function ReactTable({ columns, data }) {
                   {' '}
                   {column.isSorted ? (
                     column.isSortedDesc ? (
-                      <FaArrowCircleDown />
+                      <FaSortAlphaUp />
                     ) : (
-                      <FaArrowCircleUp />
+                      <FaSortAlphaDown />
                     )
                   ) : (
                     ''
