@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Badge, NavLink } from 'reactstrap';
-import ReactTable from '../ReactTable';
+import TableView from './TableView';
 
 import questionList from '../../data';
 
@@ -61,7 +61,7 @@ const Table = () => {
       <Col>
         <Row>
           <Col>
-            <ReactTable columns={columns} data={data} />
+            <TableView columns={columns} data={data} />
           </Col>
         </Row>
       </Col>

@@ -3,7 +3,7 @@ import { Table } from 'reactstrap';
 import { useTable, useSortBy } from 'react-table';
 import { FaSortAlphaUp, FaSortAlphaDown } from 'react-icons/fa';
 
-function ReactTable({ columns, data }) {
+function TableView({ columns, data }) {
   const {
     getTableProps,
     getTableBodyProps,
@@ -63,4 +63,4 @@ function ReactTable({ columns, data }) {
   );
 }
 
-export default ReactTable;
+export default TableView;
