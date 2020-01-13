@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  Collapse,
   Container,
   Nav,
   Navbar,
   NavbarBrand,
   NavLink,
-  NavbarToggler,
   NavItem,
 } from 'reactstrap';
 import { FaGithub } from 'react-icons/fa';
@@ -14,27 +12,20 @@ import { FaGithub } from 'react-icons/fa';
 import './styles.scss';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
-    <Navbar color="light" light expand="md" sticky="top">
+    <Navbar color="light" light>
       <Container>
         <NavbarBrand>Leetcode Patterns</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink
-                target="_blank"
-                href="https://github.com/SeanPrashad/leetcode-patterns"
-              >
-                <FaGithub />
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
+        <Nav className="ml-auto" navbar>
+          <NavItem>
+            <NavLink
+              target="_blank"
+              href="https://github.com/SeanPrashad/leetcode-patterns"
+            >
+              <FaGithub />
+            </NavLink>
+          </NavItem>
+        </Nav>
       </Container>
     </Navbar>
   );
