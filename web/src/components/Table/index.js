@@ -52,8 +52,12 @@ const Table = () => {
             accessor: 'companies',
             Cell: cellInfo => {
               return cellInfo.row.original.companies.map(company => {
-                const img = images(`./Google.png`);
-                return <img src={img} alt={company} key={company} />;
+                const icon = images(`./${company}.png`);
+                return (
+                  <span key={company} title={company}>
+                    <img src={icon} alt={company} />
+                  </span>
+                );
               });
             },
             disableSortBy: true,
