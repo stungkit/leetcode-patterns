@@ -13,6 +13,7 @@ import classnames from 'classnames';
 
 import Table from '../Table';
 import Tips from '../Tips';
+import Acknowledgements from '../Acknowledgements';
 
 import './styles.scss';
 
@@ -46,6 +47,16 @@ const Tabs = () => {
             Tips
           </NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '3' })}
+            onClick={() => {
+              toggle('3');
+            }}
+          >
+            Acknowledgements
+          </NavLink>
+        </NavItem>
       </Nav>
       <Container>
         <TabContent activeTab={activeTab}>
@@ -60,6 +71,13 @@ const Tabs = () => {
             <Row>
               <Col>
                 <Tips />
+              </Col>
+            </Row>
+          </TabPane>
+          <TabPane tabId="3">
+            <Row>
+              <Col>
+                <Acknowledgements />
               </Col>
             </Row>
           </TabPane>
