@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Badge, NavLink } from 'reactstrap';
 import ReactTooltip from 'react-tooltip';
 import TableView from './TableView';
@@ -11,6 +11,15 @@ import './styles.scss';
 const images = require.context('../../icons', true);
 
 const Table = () => {
+  const [checked, setChecked] = useState(
+    JSON.parse(localStorage.getItem('checked')) ||
+      new Array(questionList.length).fill(false),
+  );
+
+  useEffect(() => {
+    window.localStorage.setItem('checked', JSON.stringify(checked));
+  }, [checked]);
+
   const data = React.useMemo(() => questionList, []);
 
   const columns = React.useMemo(
@@ -18,6 +27,23 @@ const Table = () => {
       {
         Header: 'Sort questions by name or pattern!',
         columns: [
+          {
+            id: 'Checkbox',
+            Cell: rowInfo => {
+              return (
+                <input
+                  type="checkbox"
+                  className="checkbox"
+                  name={rowInfo.row.original.name}
+                  checked={checked[rowInfo.row.id]}
+                  onChange={() => {
+                    checked[rowInfo.row.id] = !checked[rowInfo.row.id];
+                    setChecked([...checked]);
+                  }}
+                />
+              );
+            },
+          },
           {
             Header: 'Name',
             accessor: 'name',
@@ -65,7 +91,14 @@ const Table = () => {
             Cell: cellInfo => {
               const companies = cellInfo.row.original.companies.map(company => {
                 const icon = images(`./${company}.png`);
-                return <img src={icon} alt={company} data-tip={company} />;
+                return (
+                  <img
+                    key={company}
+                    src={icon}
+                    alt={company}
+                    data-tip={company}
+                  />
+                );
               });
 
               return <Row className="companies">{companies}</Row>;
@@ -75,6 +108,7 @@ const Table = () => {
         ],
       },
     ],
+    // eslint-disable-next-line
     [],
   );
 
