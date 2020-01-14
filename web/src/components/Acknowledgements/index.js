@@ -10,6 +10,7 @@ import {
   Col,
   Container,
 } from 'reactstrap';
+import { Event } from '../Shared/Tracking';
 
 import Blind from '../../images/Blind.png';
 import Educative from '../../images/Educative.png';
@@ -35,6 +36,9 @@ const Acknowledgements = () => {
                 <NavLink
                   target="_blank"
                   href="https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU"
+                  onClick={() => {
+                    Event('Acknowledgements', 'Clicked URL', 'Blind 75 url');
+                  }}
                 >
                   https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU
                 </NavLink>
@@ -51,6 +55,13 @@ const Acknowledgements = () => {
                 <NavLink
                   target="_blank"
                   href="https://www.educative.io/courses/grokking-the-coding-interview"
+                  onClick={() => {
+                    Event(
+                      'Acknowledgements',
+                      'Clicked URL',
+                      'Educative.io url',
+                    );
+                  }}
                 >
                   https://www.educative.io/courses/grokking-the-coding-interview
                 </NavLink>
@@ -69,6 +80,9 @@ const Acknowledgements = () => {
                 <NavLink
                   target="_blank"
                   href="https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed"
+                  onClick={() => {
+                    Event('Acknowledgements', 'Clicked URL', 'Hackernoon url');
+                  }}
                 >
                   https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
                 </NavLink>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Badge, NavLink } from 'reactstrap';
 import ReactTooltip from 'react-tooltip';
 import TableView from './TableView';
+import { Event } from '../Shared/Tracking';
 
 import questionList from '../../data';
 
@@ -25,7 +26,17 @@ const Table = () => {
             Header: 'URL',
             accessor: 'url',
             Cell: cellInfo => (
-              <NavLink target="_blank" href={cellInfo.row.original.url}>
+              <NavLink
+                target="_blank"
+                href={cellInfo.row.original.url}
+                onClick={() => {
+                  Event(
+                    'Table',
+                    'Clicked url',
+                    `${cellInfo.row.original.name} url`,
+                  );
+                }}
+              >
                 {cellInfo.row.original.url}
               </NavLink>
             ),
