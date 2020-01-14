@@ -29,15 +29,17 @@ const Table = () => {
         columns: [
           {
             id: 'Checkbox',
-            Cell: rowInfo => {
+            Cell: cellInfo => {
               return (
                 <input
                   type="checkbox"
                   className="checkbox"
-                  name={rowInfo.row.original.name}
-                  checked={checked[rowInfo.row.id]}
+                  name={cellInfo.row.original.name}
+                  checked={checked[cellInfo.row.original.id]}
                   onChange={() => {
-                    checked[rowInfo.row.id] = !checked[rowInfo.row.id];
+                    checked[cellInfo.row.original.id] = !checked[
+                      cellInfo.row.original.id
+                    ];
                     setChecked([...checked]);
                   }}
                 />
