@@ -12,7 +12,7 @@ class App extends React.Component {
   componentDidMount() {
     dotenv.config();
 
-    initGA(process.env.REACT_APP_ANALYTICS, { debug: false });
+    initGA('UA-92642042-4', { debug: false });
     PageView();
   }
 
