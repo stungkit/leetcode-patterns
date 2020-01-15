@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Badge, NavLink } from 'reactstrap';
+import {
+  Table as ReactTable,
+  Container,
+  Row,
+  Badge,
+  NavLink,
+} from 'reactstrap';
 import ReactTooltip from 'react-tooltip';
-import TableView from './TableView';
+import { useTable, useFilters } from 'react-table';
+import { FaSortAlphaUp, FaSortAlphaDown } from 'react-icons/fa';
 import { Event } from '../Shared/Tracking';
 
 import questionList from '../../data';
@@ -9,6 +16,22 @@ import questionList from '../../data';
 import './styles.scss';
 
 const images = require.context('../../icons', true);
+
+function DefaultColumnFilter({
+  column: { filterValue, preFilteredRows, setFilter },
+}) {
+  const count = preFilteredRows.length;
+
+  return (
+    <input
+      value={filterValue || ''}
+      onChange={e => {
+        setFilter(e.target.value || undefined); // Set undefined to remove the filter entirely
+      }}
+      placeholder={`Search ${count} records...`}
+    />
+  );
+}
 
 const Table = () => {
   const [checked, setChecked] = useState(
@@ -19,6 +42,15 @@ const Table = () => {
   useEffect(() => {
     window.localStorage.setItem('checked', JSON.stringify(checked));
   }, [checked]);
+
+  const defaultColumn = React.useMemo(
+    () => ({
+      Filter: DefaultColumnFilter,
+      minWidth: 30,
+      maxWidth: 10,
+    }),
+    [],
+  );
 
   const data = React.useMemo(() => questionList, []);
 
@@ -68,7 +100,8 @@ const Table = () => {
                 {cellInfo.row.original.url}
               </NavLink>
             ),
-            disableSortBy: true,
+            disableFilters: true,
+            maxWidth: 2,
           },
           {
             Header: 'Pattern',
@@ -77,7 +110,6 @@ const Table = () => {
           {
             Header: 'Difficulty',
             accessor: 'difficulty',
-            disableSortBy: true,
             Cell: cellInfo => (
               <Badge
                 className={cellInfo.row.original.difficulty.toLowerCase()}
@@ -105,7 +137,7 @@ const Table = () => {
 
               return <Row className="companies">{companies}</Row>;
             },
-            disableSortBy: true,
+            disableFilters: true,
           },
         ],
       },
@@ -114,16 +146,65 @@ const Table = () => {
     [],
   );
 
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+  } = useTable(
+    {
+      columns,
+      data,
+      defaultColumn,
+    },
+    useFilters,
+  );
+
   return (
     <Container className="table">
-      <Col>
-        <Row>
-          <Col>
-            <ReactTooltip />
-            <TableView columns={columns} data={data} />
-          </Col>
-        </Row>
-      </Col>
+      <ReactTooltip />
+      <ReactTable align="center" striped hover {...getTableProps()}>
+        <thead>
+          {headerGroups.map(headerGroup => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map(column => (
+                <th {...column.getHeaderProps()}>
+                  {column.render('Header')}
+                  <span>
+                    {' '}
+                    {column.isSorted ? (
+                      column.isSortedDesc ? (
+                        <FaSortAlphaUp />
+                      ) : (
+                        <FaSortAlphaDown />
+                      )
+                    ) : (
+                      ''
+                    )}
+                  </span>
+                  <div>{column.canFilter ? column.render('Filter') : null}</div>
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+
+        <tbody {...getTableBodyProps()}>
+          {rows.map(row => {
+            prepareRow(row);
+            return (
+              <tr {...row.getRowProps()}>
+                {row.cells.map(cell => {
+                  return (
+                    <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </ReactTable>
     </Container>
   );
 };
